@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker: 
-      - image: circleci/node:4.8.2
+      - image: python:3
     steps:
       - checkout 
       - run:
@@ -16,6 +16,6 @@ jobs:
             chmod +x /usr/bin/geckodriver
             rm geckodriver-v0.23.0-linux64.tar.gz
             apt install firefox-esr -y
-            ./scripts/run &
+            sudo ./scripts/run &
       - run: python3 ./scripts/test.py
 
