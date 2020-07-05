@@ -5,4 +5,10 @@ jobs:
       - image: circleci/node:4.8.2
     steps:
       - checkout 
+      - run:
+          name: install prerequisites
+          command: |
+            sudo apt update && sudo apt upgrade -y
+            sudo apt install python3
+            pip3 install -r requirements.txt
       - run: python3 ./scripts/test
