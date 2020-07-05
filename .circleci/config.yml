@@ -16,6 +16,6 @@ jobs:
             chmod +x /usr/bin/geckodriver
             rm geckodriver-v0.23.0-linux64.tar.gz
             apt install firefox-esr -y
-      - run: sudo ./scripts/run &
+      - run: ./scripts/run &
              python3 ./scripts/test.py
 
