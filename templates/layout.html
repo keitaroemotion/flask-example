@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<title>{{ title }}</title>
+</head>
+<body>
+{% block content %}
+    <div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
+    <button type="button" style="cursor:pointer;" (click)="unfold()">Click Me!</button>
+    </div>
+    <div id="open" style="display:none;clear:both;">
+        aaa
+    </div>
+{% endblock %}
+</body>
+</html>
+
+<script type="text/javascript">
+</script>
