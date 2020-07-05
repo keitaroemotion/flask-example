@@ -3,9 +3,9 @@ from selenium.webdriver.common.keys     import Keys
 from selenium.webdriver.firefox.options import Options
 import re
 
-port = 5000
+port = '5000'
 host = 'localhost'
-url  = f"http://{host}:{port}"
+url  = "http://" + host + ":" + port
 
 options = Options()
 options.add_argument('-headless')
