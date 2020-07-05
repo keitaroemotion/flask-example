@@ -1,0 +1,6 @@
+# sudo docker stop $(docker ps -q)  
+# sudo docker kill $(docker ps -a -q)  
+# docker rmi -f $(docker images -a -q)
+# docker ps -a | awk '{print $1}' | grep -v CONTAINER | uniq | xargs -I {} docker rm {}
+docker build . -t test
+docker run -it test /bin/bash 
