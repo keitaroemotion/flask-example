@@ -23,8 +23,7 @@ try:
     elem.click() # TODO: this is not nice... gotta do something with it.
     accordion = [line for line in driver.page_source.split('\n') if re.match(r'.*accordion.*display.*', line)]
     assert(len(accordion) == 1)
-    print("success unfolding the content.")
 except:
-    print("error unfolding the content.")
+    raise Exception('UI is not loaded correctly.')
 finally:
     driver.close()
