@@ -9,7 +9,7 @@ jobs:
           name: install prerequisites
           command: |
             sudo apt update && sudo apt upgrade -y
-            sudo apt install python3 -y
+            sudo apt install python3.7 -y
             sudo apt install python3-pip -y
             sudo pip3 install -r requirements.txt
             wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz
