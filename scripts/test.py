@@ -2,10 +2,13 @@ from selenium                           import webdriver
 from selenium.webdriver.common.keys     import Keys
 from selenium.webdriver.firefox.options import Options
 import re
+import time
 
 port = '5000'
 host = 'localhost'
 url  = "http://" + host + ":" + port
+
+time.sleep(10)
 
 options = Options()
 options.add_argument('-headless')
