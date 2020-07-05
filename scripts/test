@@ -20,7 +20,7 @@ elem = driver.find_element_by_class_name("button")
 try:
     accordion = [line for line in driver.page_source.split('\n') if re.match(r'.*accordion.*display.*', line)]
     elem.click()
-    elem.click()
+    elem.click() # TODO: this is not nice... gotta do something with it.
     accordion = [line for line in driver.page_source.split('\n') if re.match(r'.*accordion.*display.*', line)]
     assert(len(accordion) == 1)
     print("success unfolding the content.")
