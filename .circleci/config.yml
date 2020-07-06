@@ -18,4 +18,8 @@ jobs:
             apt install firefox-esr -y
       - run: ./scripts/run &
              python3 ./scripts/test.py
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:595df114-c456-4757-88d1-3466a1ca7573@git.heroku.com/ccitest2.git master
 
